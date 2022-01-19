@@ -1,0 +1,152 @@
+﻿body {
+    /*padding-top: 50px;
+    padding-bottom: 20px;*/
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 5px solid rgba(0, 0, 0, 0.1);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+.mt-20{
+    margin-top:20px;
+}
+
+.front-header-text {
+    font-family: 'Anton', sans-serif;
+    font-size: 72px;
+}
+
+.card-img-container {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 120px;
+    height: 200px;
+}
+.bs-card-img {
+    display: block;
+    margin: auto;
+}
+
+.card-btn {
+    display: flex;
+    margin: 0 auto;
+}
+
+.card {
+    width: 255px;
+    height: 350px;
+    margin: 0 auto;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition:  0.3s ease-in-out;
+    -ms-transition:  0.3s ease-in-out;
+    -o-transition:  0.3s ease-in-out;
+    transition:  0.3s ease-in-out;
+}
+
+.card:hover {
+    -ms-transform: scale(1.025); /* IE 9 */
+    -webkit-transform: scale(1.025); /* Safari 3-8 */
+    transform: scale(1.025); 
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.35);
+}
+
+.trend-card-text{
+    font-size: 14px;
+}
+
+.main-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.img-container {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 15px;
+    max-width: 600px;
+    height: auto;
+    float: left;
+}
+
+.info-container {
+    max-width: 400px;
+    height: auto;
+    float: left;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.prod-img {
+    max-width: 320px;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.clear {
+    clear: both;
+}
+
+
+@media only screen and (max-width: 991px) {
+    .card-deck {
+        column-count: 2;
+    }
+    .card-columns {
+        column-count: 2;
+    }
+    .info-container {
+        max-width: 300px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .img-container {
+        float: none;
+    }
+
+    .info-container {
+        max-width: 400px;
+        float: none;
+    }
+}
+
+@media only screen and (max-width: 545px) {
+    .card-columns {
+        column-count: 1;
+    }
+}

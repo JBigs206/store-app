@@ -1,0 +1,22 @@
+﻿@model IEnumerable<StoreWebApp.Models.ProductModel>
+<div class="mt-20">
+    <h5>Trending</h5>
+    <hr />
+</div>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+    @foreach (var item in Model)
+    {
+        <div class="col mb-4">
+            <div class="card">
+                <a href="../../../Product/Index?Id=@item.Id">
+                    <div class="card-img-container">
+                        <img class="card-img-top bs-card-img" src=@item.Image alt="@item.Title">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text trend-card-text">@item.Description</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    }
+</div>

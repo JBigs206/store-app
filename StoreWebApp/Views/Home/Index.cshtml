@@ -1,0 +1,13 @@
+﻿@model IEnumerable<StoreWebApp.Models.ProductModel>
+@{
+    ViewBag.Title = "Home Page";
+}
+<div>
+    <p class="front-header-text">store app.</p>
+</div>
+<div>
+    @Html.Partial("PartialViews/_TrendingProductPartial", TempData["trendingData"])
+</div>
+<div>
+    @Html.Partial("PartialViews/_MoreToExplorePartial", TempData["moreToExploreData"])
+</div>

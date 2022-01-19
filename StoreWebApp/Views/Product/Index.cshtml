@@ -1,0 +1,20 @@
+﻿@model StoreWebApp.Models.ProductModel
+@using StoreWebApp.Models
+@{
+    ViewBag.Title = "Product Page";
+}
+
+<div class="main-container">
+    <div class="img-container">
+        <img class="card-img-top prod-img" src=@Model.Image alt="@Model.Title">
+    </div>
+    <div class="info-container">
+        <p class="card-text">@Model.Description</ p >
+        <p class="card-title">$@Model.Price</p>
+        <button type="button" class="btn btn-info">Add to Cart</button>
+    </div>
+</div>
+<div class="clear"></div>
+<div>
+    @Html.Partial("PartialViews/_MoreToExplorePartial", TempData["moreToExploreData"])
+</div>
