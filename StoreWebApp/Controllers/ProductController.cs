@@ -11,11 +11,10 @@ namespace StoreWebApp.Controllers
         // GET: Product
         public async Task<ActionResult> Index(int Id = 0)
         {
-            string key = "products";
-            var ProductData = await Services.GetPartialProductListAsync();
+            var ProductData = await Services.GetDataFromAPIAsync();
             Random rnd = new Random();
             TempData["moreToExploreData"] = ProductData.OrderBy(item => rnd.Next()).Take(6);
-            var Product = await Services.GetProductByIdAsync(key,Id);
+            var Product = await Services.GetProductByIdAsync(Id);
             return View(Product);
         }
     }

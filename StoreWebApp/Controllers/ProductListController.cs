@@ -9,8 +9,7 @@ namespace StoreWebApp.Controllers
         // GET: ProductList
         public async Task<ActionResult> Index()
         {
-            string key = "products";
-            var Products = await Services.GetDataFromAPIAsync(key);
+            var Products = await Services.GetDataFromAPIAsync();
             return View(Products);
         }
     }
